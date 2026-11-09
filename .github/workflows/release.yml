@@ -1,0 +1,61 @@
+name: Release IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag, defaults to v<app version>
+        required: false
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: xcode-27
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build app
+        run: |
+          xcodebuild -version
+          xcodebuild -project GestaltX.xcodeproj -target GestaltX -configuration Release -sdk iphoneos \
+            SYMROOT="$PWD/build" CODE_SIGNING_ALLOWED=NO build
+
+      - name: Package IPA
+        id: package
+        run: |
+          app=build/Release-iphoneos/GestaltX.app
+          appex="$app/PlugIns/GestaltXShare.appex"
+          # Re-signing tools take the App Group from the entitlements embedded here.
+          # Nested code must be signed before the app that contains it.
+          codesign --force --sign - --entitlements ShareExtension/GestaltXShare.entitlements "$appex"
+          codesign --force --sign - --entitlements GestaltX/GestaltX.entitlements "$app"
+          codesign --display --entitlements - "$appex" 2>&1 | grep -F group.com.huami.gestultx
+          codesign --display --entitlements - "$app" 2>&1 | grep -F group.com.huami.gestultx
+          version=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$app/Info.plist")
+          ipa="GestaltX_$version.ipa"
+          mkdir Payload
+          cp -R "$app" Payload/
+          zip -qry "$ipa" Payload
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "ipa=$ipa" >> "$GITHUB_OUTPUT"
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_TAG: ${{ inputs.tag }}
+          VERSION: ${{ steps.package.outputs.version }}
+          IPA: ${{ steps.package.outputs.ipa }}
+        run: |
+          tag="$INPUT_TAG"
+          if [ -z "$tag" ] && [ "$GITHUB_REF_TYPE" = tag ]; then tag="$GITHUB_REF_NAME"; fi
+          tag="${tag:-v$VERSION}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "$IPA" --clobber
+          else
+            gh release create "$tag" "$IPA" --target "$GITHUB_SHA" --title "$tag" --generate-notes
+          fi

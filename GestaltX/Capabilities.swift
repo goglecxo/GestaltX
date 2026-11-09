@@ -38,7 +38,7 @@ struct Capability: Identifiable {
         switch id {
         case "ai": "Restart required. Apple Intelligence also depends on device and region."
         case "pencil": "Restart the device, then reopen Settings. Pencil hardware support is still required."
-        case "bootChime", "chargeLimit", "tapToWake", "cameraControl", "actionButton", "internal", "storage", "srd": "A device restart may be required."
+        case "bootChime", "chargeLimit", "tapToWake", "cameraControl", "actionButton", "internal", "srd": "A device restart may be required."
         default: "Respring first. Restart the device if the change does not appear."
         }
     }
@@ -68,8 +68,7 @@ struct Capability: Identifiable {
         .init(id: "stageManager", category: .ipad, title: "Stage Manager", detail: "Expose Stage Manager support. Layout behavior varies by device.", keys: ["qeaj75wk3HF4DwQ8qbIi7g"], caution: true),
         .init(id: "ipadApps", category: .ipad, title: "iPad App Compatibility", detail: "Allow iPad app compatibility types on iPhone.", keys: ["9MZ5AdH43csAUajl/dU+IQ"]),
         .init(id: "ai", category: .intelligence, title: "Apple Intelligence Capability", detail: "Set the generative models capability. Availability also depends on hardware, region and Apple services.", keys: ["A62OafQ85EJAiiqKn4agtg"]),
-        .init(id: "internal", category: .advanced, title: "Apple Internal Features", detail: "Expose internal menus. Some system services may behave differently.", keys: ["EqrsVvjcYDdxHBiQmGhAWw"], caution: true),
-        .init(id: "storage", category: .advanced, title: "Internal Storage View", detail: "Show internal storage categories. Experimental on iPad.", keys: ["LBJfwOEzExRxzlAnSuI7eg"], caution: true),
+        .init(id: "internal", category: .advanced, title: "Apple Internal Features", detail: "Expose internal menus, internal storage categories and Internal features such as full FTM. Experimental on iPad. May cause side effects, such as OTA updates not being detected properly or AI models failing to re-download.", keys: ["Oji6HRoPi7rH7HPdWVakuw", "LBJfwOEzExRxzlAnSuI7eg", "EqrsVvjcYDdxHBiQmGhAWw"], caution: true),
         .init(id: "srd", category: .advanced, title: "Security Research Device", detail: "Change the SRD capability flag. This does not turn the device into an Apple SRD.", keys: ["XYlJKKkj2hztRP1NWWnhlw"], caution: true),
     ]
 }

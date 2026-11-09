@@ -9523,140 +9523,48 @@
         }
       }
     },
-    "Expose internal menus. Some system services may behave differently.": {
+    "Expose internal menus, internal storage categories and Internal features such as full FTM. Experimental on iPad. May cause side effects, such as OTA updates not being detected properly or AI models failing to re-download.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Expose internal menus. Some system services may behave differently."
+            "value": "Expose internal menus, internal storage categories and Internal features such as full FTM. Experimental on iPad. May cause side effects, such as OTA updates not being detected properly or AI models failing to re-download."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "显示内部菜单，部分系统服务的行为可能发生变化。"
+            "value": "显示内部菜单、内部存储分类及完整版 FTM 等 Internal 功能，在 iPad 上属于实验性功能。可能带来副作用，例如无法正常检测 OTA 更新、无法重新下载 AI 模型。"
           }
         },
         "fa": {
           "stringUnit": {
             "state": "translated",
-            "value": "منوهای داخلی را نمایش دهید. ممکن است برخی خدمات سیستم رفتار متفاوتی داشته باشند."
+            "value": "منوهای داخلی، دسته‌های فضای ذخیره‌سازی داخلی و قابلیت‌های Internal، مانند نسخهٔ کامل FTM، را نمایش دهید. روی iPad آزمایشی است. ممکن است عوارض جانبی داشته باشد؛ مثلاً به‌روزرسانی‌های OTA به‌درستی شناسایی نشوند یا مدل‌های هوش مصنوعی دوباره دانلود نشوند."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Показать внутренние меню. Некоторые системные службы могут работать иначе."
+            "value": "Показать внутренние меню, внутренние категории хранилища и функции Internal, например полную версию FTM. Экспериментально на iPad. Возможны побочные эффекты: например, некорректное обнаружение обновлений OTA или невозможность повторной загрузки моделей ИИ."
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hiển thị menu nội bộ. Một số dịch vụ hệ thống có thể hoạt động khác đi."
+            "value": "Hiển thị menu nội bộ, các loại bộ nhớ nội bộ và các tính năng Internal, ví dụ FTM đầy đủ. Đang thử nghiệm trên iPad. Có thể gây tác dụng phụ, chẳng hạn không phát hiện được bản cập nhật OTA hoặc không thể tải lại các mô hình AI."
           }
         },
         "zh-Hant-HK": {
           "stringUnit": {
             "state": "translated",
-            "value": "顯示內部菜單，部分系統服務的行為可能發生變化。"
+            "value": "顯示內部菜單、內部存儲分類及完整版 FTM 等 Internal 功能，在 iPad 上屬於實驗性功能。可能帶來副作用，例如無法正常檢測 OTA 更新、無法重新下載 AI 模型。"
           }
         },
         "zh-Hant-TW": {
           "stringUnit": {
             "state": "translated",
-            "value": "顯示內部選單，部分系統服務的行為可能發生變化。"
-          }
-        }
-      }
-    },
-    "Internal Storage View": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Internal Storage View"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "内部存储视图"
-          }
-        },
-        "fa": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "نمای فضای ذخیره‌سازی داخلی"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Внутреннее хранилище"
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Chế độ xem bộ nhớ nội bộ"
-          }
-        },
-        "zh-Hant-HK": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "內部存儲視圖"
-          }
-        },
-        "zh-Hant-TW": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "內部儲存檢視"
-          }
-        }
-      }
-    },
-    "Show internal storage categories. Experimental on iPad.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Show internal storage categories. Experimental on iPad."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "显示内部存储分类，在 iPad 上属于实验性功能。"
-          }
-        },
-        "fa": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "دسته‌های فضای ذخیره‌سازی داخلی را نمایش دهید. روی iPad آزمایشی است."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Показать внутренние категории хранилища. Экспериментально на iPad."
-          }
-        },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hiển thị các loại bộ nhớ nội bộ. Đang thử nghiệm trên iPad."
-          }
-        },
-        "zh-Hant-HK": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "顯示內部存儲分類，在 iPad 上屬於實驗性功能。"
-          }
-        },
-        "zh-Hant-TW": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "顯示內部儲存分類，在 iPad 上屬於實驗性功能。"
+            "value": "顯示內部選單、內部儲存分類及完整版 FTM 等 Internal 功能，在 iPad 上屬於實驗性功能。可能帶來副作用，例如無法正常偵測 OTA 更新、無法重新下載 AI 模型。"
           }
         }
       }

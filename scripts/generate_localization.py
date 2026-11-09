@@ -215,9 +215,7 @@ Allow iPad app compatibility types on iPhone.	允许 iPhone 使用 iPad 应用�
 Apple Intelligence Capability	Apple 智能功能标记
 Set the generative models capability. Availability also depends on hardware, region and Apple services.	设置生成式模型功能标记，可用性仍取决于硬件、地区与 Apple 服务。
 Apple Internal Features	Apple 内部功能
-Expose internal menus. Some system services may behave differently.	显示内部菜单，部分系统服务的行为可能发生变化。
-Internal Storage View	内部存储视图
-Show internal storage categories. Experimental on iPad.	显示内部存储分类，在 iPad 上属于实验性功能。
+Expose internal menus, internal storage categories and Internal features such as full FTM. Experimental on iPad. May cause side effects, such as OTA updates not being detected properly or AI models failing to re-download.	显示内部菜单、内部存储分类及完整版 FTM 等 Internal 功能，在 iPad 上属于实验性功能。可能带来副作用，例如无法正常检测 OTA 更新、无法重新下载 AI 模型。
 Security Research Device	安全研究设备
 Change the SRD capability flag. This does not turn the device into an Apple SRD.	更改 SRD 功能标记，不会将设备变成 Apple 官方安全研究设备。
 United States	美国

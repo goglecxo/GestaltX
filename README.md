@@ -21,11 +21,13 @@ A MobileGestalt editor for iPhone and iPad. Developed by [huamidev](https://gith
 | Device | Model name, boot/shutdown chime, charge limit, tap to wake, Camera Control settings, Action Button settings |
 | iPad | Apple Pencil settings, Stage Manager capability, iPad app compatibility |
 | Intelligence | Independent region-code options, Apple Intelligence capability flag, and sales-region options for activation attempts on China-mainland devices |
-| Advanced | Apple internal feature flags, internal storage view, Security Research Device flag |
+| Advanced | Apple internal feature flags including the internal storage view, Security Research Device flag |
 | Field editor | Read, search, add, edit, and remove `CacheExtra` fields; local plist import/export; String, Integer, Real, Boolean, Data, Date, Array, and Dictionary values |
 | Changes | Automatic reading and manual re-read, staged before/after review, verified writes, per-preset restore |
 | Backups | Automatic initial backup before device editing, backup before every write, original-value records; open, export, restore, and delete |
 | Logs & respring | Actual exploit-stage logs and manual NeoSpring respring |
+
+Apple Internal Features sets `HasInternalSettingsBundle`, `InternalBuild`, and `apple-internal-install` to 1 when enabled, restores their original values when disabled, and preserves existing values with Keep Current. Enabling it may cause side effects, such as OTA updates not being detected properly or AI models failing to re-download.
 
 Usually, changing the region code is enough to try enabling AI; there is no need to change Sales Region. Selecting United States for Region Code sets `RegionCode` to `LL` and keeps the sales-region suffix. You can also choose China (Mainland), Hong Kong, Taiwan, Japan or the United Kingdom. Sales Region and Region Code can be applied together: the sales suffix follows Sales Region, while the code follows Region Code.
 

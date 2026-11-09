@@ -23,7 +23,7 @@ final class GestaltManager: ObservableObject {
     @Published private(set) var logs: [String] = []
     @Published var message: String?
     @Published var isRespringing = false
-    @Published private(set) var additionalOptionsUnlocked = false
+    @Published private(set) var additionalOptionsUnlocked = true
     func unlockAdditionalOptions() { additionalOptionsUnlocked = true }
     @Published var needsRespring = false
     @Published var choices: [String: PresetChoice] = [:]
